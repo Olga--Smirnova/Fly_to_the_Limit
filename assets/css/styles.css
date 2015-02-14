@@ -1,0 +1,1362 @@
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:0 0}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+section, header, nav, footer, div, li, li a, p, span {
+	display: block;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+li a, a {
+	text-decoration: none;
+}
+
+/*******************************************************************************************************/
+
+	/*Fonts */
+
+/*******************************************************************************************************/	
+
+/*Scale: based on minor 3rd, 1:1.2
+http://modularscale.com/scale/?px1=16&px2=&ra1=1.2&ra2=0*/
+@font-face {
+	font-family: LatoBold;
+	src: url(../fonts/Lato-Bol.ttf);
+}
+
+@font-face {
+	font-family: LatoBlack;
+	src: url(../fonts/Lato-Bla.ttf);
+}
+
+@font-face {
+	font-family: LatoReg;
+	src: url(../fonts/Lato-Reg.ttf);
+}
+
+@font-face {
+	font-family: LatoLig;
+	src: url(../fonts/Lato-Lig.ttf);
+}
+
+@font-face {
+	font-family: Athena;
+	src: url(../fonts/new_athena_unicode.ttf);
+}
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Button's Styles */
+
+/*******************************************************************************************************/
+
+/* Like Counter + Like Btn */
+.heartCounter img, .heartCounter_hp img {
+	float: left;
+	padding-left: .3em;
+	padding-top: .3em;
+}
+
+.heartCounter p, .heartCounter_hp p {
+	float: right;
+	padding-right: 0.3em;
+}
+
+.like, .heartCounter, .heartCounter_hp, #back, #next, #sendMessage, .hideIt {
+	background: rgb(36,160,210);
+	width: 3.6em;
+	line-height: 1.2em;
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1em;
+	color: white;
+	border: 0.12em solid rgb(36,160,210);
+	padding-bottom: .1em;
+}
+
+.heartCounter, .heartCounter_hp {
+	height: 1.4em;
+}
+
+.heartCounter_hp {
+	float: left;
+	margin-top: 0.2em;
+}
+
+.like {
+	text-align: center;
+	margin-top: .1em;
+}
+
+.like:hover, #back:hover, #next:hover, #sendMessage:hover {
+	background: white;
+	color: rgb(36,160,210);
+}
+
+ #back, #next {
+ 	margin-top: 11em;
+ }
+
+ #sendMessage {
+ 	margin-top: .2em;
+ 	margin-left: 23.9em;
+ 	margin-right: 0;
+ }
+
+
+
+/* Find Out More + Book Now Btn */
+.fom, .book, #submit {
+	background: rgb(240,157,52);
+	width: 9.6em;
+	line-height: 1.3em;
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1em;
+	color: white;
+	text-align: center;
+	border: 0.12em solid rgb(240,157,52);
+}
+
+
+.fom {
+	float: right;
+}
+
+.fom:hover, .book:hover, #submit:hover {
+	background: white;
+	color: rgb(240,157,52);
+}
+
+.like:disabled, #back:disabled, #next:disabled, #submit:disabled, #sendMessage:disabled {
+    background: silver;
+    color: rgb(88,88,88);
+    border: solid 0.12em rgb(88,88,88);
+    cursor: auto;
+ }
+
+
+/*correct the position of buttons for Home Page/most popular flights vigets*/
+.btns {
+	width: 19.2em;
+	position: absolute;
+	bottom: 0.2em;
+	left: 0.2em;
+	vertical-align: bottom;
+}
+
+
+/*correct the position of buttons for About Us/Aircrafts Page*/
+#about .book {
+	margin-top: 1.97em;
+}
+
+#about .aircrafts_btn {
+	padding-top: 4.1em;
+}
+
+#about .aircrafts_btn .book {
+	margin-top: .3em;
+}
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Body Styles */
+
+/*******************************************************************************************************/
+
+#container {
+	width: 60em;
+	margin: 0 auto;
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1em;
+	color: rgb(88,88,88);
+	position: relative;
+}
+
+li a {
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1em;
+}
+
+
+/*lines styles*/
+.line {
+	margin-top: 1.4em;
+	margin-bottom: 3em;
+	border-bottom: 0.16em solid rgb(36,160,210);
+}
+
+.line_grey {
+	margin: 0 auto;
+	width: 90%;
+	margin-top: 1.4em;
+	margin-bottom: 1.7em;
+	border-bottom: 0.16em solid rgb(88,88,88);
+}
+/****************/
+
+
+
+h1 {
+	font-family: Athena;
+	font-size: 2.074em;
+	color: rgb(36,160,210);
+	margin-bottom: 1em;
+}
+
+h2 {
+	font-family: Athena;
+	font-size: 2.074em;
+	color: rgb(88,88,88);
+	margin-top: 1.4em;
+	margin-bottom: .5em;
+}
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Head's Styles */
+
+/*******************************************************************************************************/
+
+#fixed {
+	display: block;
+	width: inherit;
+	position: fixed;
+	top: 0;
+	z-index: 300;
+}
+
+
+
+
+#topMenu {
+	display: block;
+	height: 2em;
+	width: inherit;
+	padding-left: 32.5em;
+	padding-top: 0.6em;
+	padding-bottom: 0.4em;
+	background-color: white;
+}
+
+#topMenu ul li a {
+	float: left;
+	margin-left: 2em;
+	font-family: LatoBold, "Tahoma", "Arial", sans-serif;
+	font-size: 0.833em;
+	color: rgb(36,160,210);
+}
+
+#topMenu ul li a:hover {
+	color: rgb(240,157,52);
+}
+
+
+
+
+nav {
+	background: rgb(88,88,88);
+	height: 3.6em;
+}
+
+#logo {
+	margin-left: 1em;
+	position: relative;
+	top: -1.6em;
+}
+
+#mainMenu {
+	float: right;
+	width: auto;
+	margin-right: .5em;
+	padding-top: 1.91em;
+}
+
+#mainMenu li {
+	float: left;
+}
+
+#mainMenu li a {
+	white-space: nowrap;
+	line-height: 1.7em;
+	padding: 0 1em;
+	color: white;
+}
+
+
+#mainMenu li:hover {
+	background: rgb(36,160,210);
+}
+
+
+/***************************** Sub-DropDown-Menu's Styles *******************************************************************/
+
+#mainMenu li ul.subMenu {
+	float: none;
+	width: auto;
+	height: auto;
+	max-height: 0;
+	position: relative;
+	left: -1000000em;
+	transition: max-height 0.2s ease-in-out;
+	-moz-transition: max-height 0.2s ease-in-out;
+	-webkit-transition: max-height 0.2s ease-in-out;
+	-o-transition: max-height 0.2s ease-in-out;
+	overflow: hidden;
+}
+
+#mainMenu li ul.subMenu li {
+	float: none;
+	background: rgb(36,160,210);
+	border-top: .1em solid rgb(88,88,88);
+	border-bottom: .1em solid rgb(255,255,255);
+}
+
+#mainMenu li ul.subMenu li:first-child {
+	border-top: .1em solid rgb(255,255,255);
+}
+
+#mainMenu li ul.subMenu li:last-child {
+	border-bottom: none;
+}
+
+#mainMenu li ul.subMenu li a {
+	white-space: nowrap;
+	line-height: 1.3em;
+	border: solid .12em rgb(36,160,210);
+}
+
+#mainMenu li ul.subMenu li a:hover {
+	background: white;
+	color: rgb(36,160,210);
+}
+
+#mainMenu li:hover ul.subMenu {
+	left: 0;
+	max-height: 7em;
+}
+
+
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Home Page Styles */
+
+/*******************************************************************************************************/
+
+#topPage {
+	margin-top: 6.1em;
+}
+
+
+.coverImage {
+	width: 100%;
+	height: 320px;
+	background:  url(../images/background.jpg);
+	background-repeat: no-repeat;
+}
+
+.mostPopImg {
+	width: 19.7em;
+	height: 10em;
+}
+
+#first {
+	background:  url(../images/first.jpg);
+	background-repeat: no-repeat;
+}
+
+#second {
+	background:  url(../images/second.jpg);
+	background-repeat: no-repeat;
+}
+
+#third {
+	background:  url(../images/third.jpg);
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+#statement {
+	font-family: LatoLig;
+	color: white;
+	position: absolute;
+	top: 1.3em;
+	left: 1.5em;
+}
+
+#statement p:first-of-type {
+	font-family: Athena;
+	font-size: 2.488em;
+}
+
+.mostPopFlight {
+	margin-top: 0.5em;
+}
+
+.mostPopFlight li, .secondPageMenu li {
+	width: 19.7em;
+	height: auto;
+	background: rgb(88,88,88);
+}
+
+.mostPopFlight li {
+	position: relative;
+}
+
+iframe {
+	display: block;
+	width: 19.7em;
+}
+
+
+.mostPopFlight li:first-of-type, .secondPageMenu li:first-of-type, iframe:first-of-type {
+	float: left;
+}
+
+.mostPopFlight li:nth-child(2), .secondPageMenu li:nth-child(2), iframe:nth-of-type(2) {
+	float: right;
+}
+
+
+.mostPopFlight li:last-of-type, .secondPageMenu li:last-of-type, iframe:last-of-type {
+	margin: 0 auto;
+	width: 19.688em;
+}
+
+.mostPopFlight li a, .secondPageMenu li a {
+	white-space: nowrap;
+	line-height: 1.7em;
+	padding: 0.2em 0;
+	color: white;
+	text-align: center;
+}
+
+.mostPopFlight li:hover, .secondPageMenu li:hover {
+	background: rgb(36,160,210);
+}
+
+
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Flights' Page Styles */
+
+/*******************************************************************************************************/
+
+.secondPageMenu {
+	margin-top: 1em;
+}
+
+
+.secondPageMenu li ul.subMenu {
+	width: auto;
+	height: auto;
+}
+
+.secondPageMenu li ul.subMenu li {
+	float: none;
+	background: rgb(36,160,210);
+	border-top: .1em solid rgb(88,88,88);
+	border-bottom: .1em solid rgb(255,255,255);
+}
+
+.secondPageMenu li ul.subMenu li:last-child {
+	border-bottom: none;
+}
+
+.secondPageMenu li ul.subMenu li a {
+	white-space: nowrap;
+	line-height: 1.3em;
+	border: solid .12em rgb(36,160,210);
+	text-align: left;
+	padding-left: 1em;
+}
+
+.secondPageMenu li ul.subMenu li a:hover {
+	background: white;
+	color: rgb(36,160,210);
+}
+
+
+
+.flex {
+	width: 28.75em;
+	height: 12.5em;
+	float: left;
+	max-width: 100%;
+}
+
+.side {
+	margin-left: 30em;
+}
+
+.side ul li {
+	font-size: 0.833em;
+}
+
+
+.side li, .side p:nth-of-type(2), .info{
+	font-size: .833em;
+}
+
+.side p:nth-child(2), .side ul {
+	margin-top: .3em;
+}
+
+.title {
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1.44em;
+	color: rgb(36,160,210);
+	line-height: 90%;
+}
+
+
+/*different position of price and book-now-button*/
+#forHeli .side>div, #forHeli2 .side>div, #forHeli3 .side>div {
+	margin-top: .11em;
+}
+
+.side>div {
+	margin-top: 1.7em;
+	float: left;
+}
+
+.moveR {
+	margin-top: .7em;
+}
+
+.moveRR {
+	margin-top: 1.54em;
+}
+/*************/
+
+
+/*price*/
+.side div p {
+	font-family: LatoBold, "Tahoma", "Arial", sans-serif;
+	font-size: 1.44em;
+	margin-bottom: .2em;
+}
+
+.side span, #about p span, #contact span:not(#contTit) {
+	font-family: LatoBlack, "Tahoma", "Arial", sans-serif;
+	font-size: 1em;
+	color: rgb(88,88,88);
+	display: inline-block;
+	margin-bottom: .3em;
+}
+
+.book {
+	margin-top: .2em;
+	clear: both;
+}
+
+.info {
+	padding-top: 1em;
+	clear: both;
+	width: 34.7em;
+	text-align: justify;
+	line-height: 150%;
+}
+
+.column_info {
+	font-size: 1em;
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	line-height: 120%;
+	-webkit-column-count: 2;
+	-webkit-column-gap: 2em; 
+	-moz-column-count: 2;
+	-moz-column-gap: 2em;  
+	column-count: 2;
+	column-gap: 2em; 
+	margin-bottom: 1.6em;
+}
+
+.chapter {
+	position: relative;
+}
+
+
+/*like-btn + like-counter here*/
+.insideFlex {
+	width: auto;
+	float: left;
+	margin-top: 9.47em;
+	margin-left: -28.54em;
+	z-index: 80;
+}
+/************/
+
+
+
+/*images for .flex for Standard Flights Page*/
+#scenic1 {
+	background: url(../images/chapter/scenic1.jpg);
+	background-repeat: no-repeat;
+}
+
+#scenic2 {
+	background: url(../images/chapter/scenic2.jpg);
+	background-repeat: no-repeat;
+}
+
+#scenic3 {
+	background: url(../images/chapter/scenic3.jpg);
+	background-repeat: no-repeat;
+}
+
+#scenic4 {
+	background: url(../images/chapter/scenic4.jpg);
+	background-repeat: no-repeat;
+}
+
+#adventure1 {
+	background: url(../images/chapter/adventure1.jpg);
+	background-repeat: no-repeat;
+}
+
+#adventure2 {
+	background: url(../images/chapter/adventure2.jpg);
+	background-repeat: no-repeat;
+}
+
+#adventure3 {
+	background: url(../images/chapter/adventure3.jpg);
+	background-repeat: no-repeat;
+}
+
+#adventure4 {
+	background: url(../images/chapter/adventure4.jpg);
+	background-repeat: no-repeat;
+}
+
+#transport1 {
+	background: url(../images/chapter/transport1.jpg);
+	background-repeat: no-repeat;
+}
+
+#transport2 {
+	background: url(../images/chapter/transport2.jpg);
+	background-repeat: no-repeat;
+}
+
+#transport3 {
+	background: url(../images/chapter/transport3.jpg);
+	background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*About Us Page Styles */
+
+/*******************************************************************************************************/
+
+#about p:not(.title) {
+	font-size: 0.833em;
+	margin-bottom: 1em;
+}
+
+#iframe {
+	width: 60em;
+}
+
+.flex2 {
+	width: 25.6em;
+	height: 9em;
+	float: left;
+}
+
+
+
+/*images for .flex for About Us/Staff Page*/
+#mckensie {
+	background: url(../images/staff/mckensie.jpg);
+	background-repeat: no-repeat;
+}
+
+#finn {
+	background: url(../images/staff/finn.jpg);
+	background-repeat: no-repeat;
+}
+
+#wendy {
+	background: url(../images/staff/wendy.jpg);
+	background-repeat: no-repeat;
+}
+
+#john {
+	background: url(../images/staff/john.jpg);
+	background-repeat: no-repeat;
+}
+
+#hans {
+	background: url(../images/staff/hans.jpg);
+	background-repeat: no-repeat;
+}
+
+
+
+/*images for .flex for About Us/Aircrafts Page*/
+#cessnaAmphibian {
+	background: url(../images/planes/cessnaAmphibian.jpg);
+	background-repeat: no-repeat;
+}
+
+#cessnaTurbo {
+	background: url(../images/planes/cessnaTurbo.jpg);
+	background-repeat: no-repeat;
+}
+
+#cessna172 {
+	background: url(../images/planes/cessna172.jpg);
+	background-repeat: no-repeat;
+}
+
+#extra {
+	background: url(../images/planes/extra.jpg);
+	background-repeat: no-repeat;
+}
+
+#dg {
+	background: url(../images/planes/dg.jpg);
+	background-repeat: no-repeat;
+}
+
+#heli {
+	background: url(../images/planes/heli.jpg);
+	background-repeat: no-repeat;
+}
+
+.planes a:nth-of-type(2) {
+	margin-top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Gallery Page Styles */
+
+/*******************************************************************************************************/
+
+#mainDisplay {
+    width: 40em;
+    height: 23em;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 11px 9px 30px 0px rgba(88,88,88,1); /*src of box-shadow: http://www.cssmatic.com/box-shadow*/
+	-webkit-box-shadow: 11px 9px 30px 0px rgba(88,88,88,1);
+	-moz-box-shadow: 11px 9px 30px 0px rgba(88,88,88,1);
+}
+
+.thumbs {
+    text-align: center;
+    width: 100%;
+    margin-top: 1.8em;
+}
+
+.thumbs img {
+	margin-left: .2em;
+	margin-bottom: .3em;
+	display: inline-block;
+}	
+
+#mainDisplay img {
+    max-height: 100%;
+}
+
+#back, #next, #mainDisplay {
+    vertical-align: bottom;
+}
+
+#back {
+	float: left;
+	margin-left: 4em;
+}
+
+#next {
+	float: right;
+	margin-right: 4em;
+}
+
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Bookings Page Styles */
+
+/*******************************************************************************************************/
+
+/*Form's Styling*/
+form {
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1em;
+	color: rgb(88,88,88); 
+}
+
+#forform1, #forform2 {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#forform2 {
+	width: 29em;
+}
+
+#orderForm1 {
+	width: 30.8em;
+}
+
+
+
+/*Blue Circle Buttons*/
+#f1, #f2, #f3, #f4 {
+	float: right;
+	margin-top: .15em;
+	color: rgb(36,160,210);
+}
+
+#f2 {
+	margin-right: 8.9em;
+}
+
+#f3 {
+	margin-right: 3.9em;
+}
+
+#f4 {
+	position: relative;
+	z-index: 200;
+	top: 0em;
+	right: 28.1em;
+}
+
+#f1:hover, #f2:hover, #f3:hover, #f4:hover {
+	color: rgb(240,157,52);
+	cursor: pointer;
+}
+
+
+
+
+.row {
+	width: 100%;
+	padding-bottom: 1em;
+	position: relative;
+}
+
+.row input, .row select {
+	width: 18em;
+	float: right;
+}
+
+#orderForm1 .row select {
+	margin-right: .9em;
+}
+
+.row label {
+	display: inline-block;
+	width: 10em;
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1em;
+	color: rgb(88,88,88);
+	text-align: right;
+}
+
+#orderForm1 .row input[name="username"] {
+	margin-right: 1.8em;
+}
+
+.row input[type="tel"] {
+	width: 9em;
+	margin-right: 9em;
+}
+
+#orderForm1 .row input[type="tel"] {
+	margin-right: 1em;
+}
+
+.row input[name="email"] {
+	width: 14em;
+	margin-right: 4em;
+}
+
+#orderForm1 .row input[name="email"] {
+	margin-right: 1em;
+}
+
+.row input[type="number"] {
+	width: 2em;
+	margin-right: 16em;
+}
+
+#orderForm1 .row input[type="number"] {
+	margin-right: 17.8em;
+}
+
+.row input[type="date"] {
+	width: 10em;
+	margin-right: 8em;
+}
+
+#orderForm1 .row input[type="date"] {
+	margin-right: 9.8em;
+}
+
+
+#forTrampers1, #forTrampers2 {
+	width: inherit;
+	padding: 0;
+	margin: 0;
+	border: none;
+	margin-top: 1em;
+}
+
+.row input[type="radio"] {
+	width: 1.5em;
+}
+
+.row div {
+	width: 4.5em;
+	float: right;
+	margin-right: 12em;
+	line-height: 90%;
+}
+
+#orderForm1 .row div {
+	margin-right: 13.8em;
+}
+
+.row textarea {
+	margin-top: .5em;
+	float: right;
+	padding: .4em;
+}
+
+#forTrampers1 .row textarea {
+	margin-right: 1.8em;
+}
+
+.row textarea.placeholder {
+	font-size: 0.694em;
+}
+
+#select2 {
+	position: relative;
+	left: .9em;
+}
+
+
+
+
+#labelAgree a {
+	color: rgb(36,160,210);
+}
+
+#labelAgree a:hover {
+	text-decoration: underline;
+	color: rgb(240,157,52);
+}
+
+#preprice {
+	font-family: LatoBold, "Tahoma", "Arial", sans-serif;
+	font-size: 1.2em;
+	margin-top: 1em;
+	display: inline-block;
+}
+
+#price {
+	display: inline-block;
+	font-family: LatoBold, "Tahoma", "Arial", sans-serif;
+	font-size: 1.2em;
+	margin-left: .5em;
+}
+
+input[type="submit"] {
+	display: block;
+	margin-top: 2em;
+}
+
+
+#position1, #position2 {
+	position: relative;
+}
+
+div.whyWeNeed {
+	display: block;
+	position: absolute;
+	z-index: 200;
+	width: 20em;
+    margin-left: -127px;
+    padding: .4em;
+    border: 0.12em solid rgb(230,230,230);
+    background-color: rgb(230,230,230);
+    background-image: -webkit-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    -moz-border-radius: 0.25em;
+    border-radius: 0.25em;
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+    box-shadow: 0 1px 2px rgba(0,0,0,.4), 0 1px 0 rgba(255,255,255,.5) inset;
+}
+
+#why1 {
+	left: 29.9em;
+	bottom: 1.89em;
+}
+
+#why2 {
+	left: 35em;
+	bottom: 1.87em;
+}
+
+.whyWeNeed p {
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 0.694em;
+	color: rgb(88,88,88);
+	width: auto;
+	display: inline-block;
+}
+
+.whyWeNeed i {
+	display: inline-block;
+}
+
+#cancellationPolicy{
+	width: 20em;
+	margin-top: -14em;
+	left: 22em;
+}
+
+ #termsConditions {
+	width: 20em;
+	margin-top: -19.3em;
+	left: 33em;
+ }
+
+#cancellationPolicy p, #termsConditions p {
+	margin-bottom: .3em; 
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 0.694em;
+	color: rgb(88,88,88);
+	width: auto;
+	height: auto;
+}
+
+#cancellationPolicy p span, #termsConditions p span {
+	font-size: 2.074em;
+	margin-bottom: 0;
+}
+
+/*validation messages styles*************************************************/
+.fail {
+	border: 0.12em solid rgb(252,48,0);
+}
+
+.validation_msg {
+	font-family: LatoBold, "Tahoma", "Arial", sans-serif;
+	font-size: 0.694em;
+	letter-spacing: .03em;
+	color: rgb(252,48,0);
+	width: auto;
+	white-space: nowrap;
+	margin-left: 16em;
+	margin-top: 1em;
+	line-height: 60%;
+	position: absolute;
+	top: 1.3em;
+	text-align: left;
+}
+
+.selectValidMesSpecialStyle {
+	top: 1.38em;
+}
+
+#emailValidMasSpecialStyle, #emailValidMasSpecialStyle2 {
+	top: 1.2em;
+}
+
+.dateValidMesSpecialStyle {
+	top: 1.7em;
+}	
+
+
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Contact Us Page Styles */
+
+/*******************************************************************************************************/
+
+#contact div div:first-of-type {
+	width: 33em;
+	float: left;
+}
+
+#contact ul li {
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 0.833em;
+	color: rgb(88,88,88);
+	margin-bottom: .3em;
+}
+
+#contact ul li i {
+	margin-right: .5em;
+}
+
+#contact ul li p {
+	margin-left: 7.5em;
+	margin-top: .01em;
+}
+
+#contact ul li p:first-of-type {
+	display: inline-block;
+	margin-left: 1.4em;
+}
+
+
+#writeUs {
+	width: 33em;
+	margin-top: 1em;
+}
+
+#writeUs .row {
+	width: 100%;
+	padding-bottom: 1em;
+	height: auto;
+	display: block;
+	position: relative;
+}
+
+#writeUs .row label {
+	width: 6.4em;
+}
+
+#writeUs .row:first-of-type {
+	float: none;
+}
+
+#writeUs .row input[name="urname"] {
+	width: 18em;
+	margin-right: 7.6em;
+}
+
+#writeUs .row input[name="mail"] {
+	width: 14em;
+	margin-right: 11.6em;
+}
+
+#writeUs .row textarea {
+	width: 25.6em;
+	float: right;
+}
+
+#writeUs .row .validation_msg {
+	font-size: 0.833em;
+	height: auto;
+	margin: 0;
+	position: absolute;
+	top: 1.9em;
+	left: 9em;
+}
+
+#writeUs div:last-of-type .validation_msg {
+	top: 16.4em;
+}
+
+
+
+
+
+/*******************************************************************************************************/
+
+	/*Footer Styles */
+
+/*******************************************************************************************************/
+
+footer {
+	position: relative;
+}
+
+footer div {
+	background: rgb(88,88,88);
+	height: 3.1em;
+	margin-top: 3em;
+}
+
+footer ul {
+	display: inline-block;
+	margin-top: .2em;
+	margin-left: 5em;
+	vertical-align: top;
+}
+
+footer div ul:first-of-type li {
+	display: inline-block;
+	margin-left: 1.2em;
+	vertical-align: top;
+}
+
+footer ul:first-of-type {
+	margin-left: 1.4em;
+}
+
+footer div ul:nth-of-type(2) {
+	margin-left: 41em;
+}
+
+footer div ul:first-of-type li a {
+	color: rgb(36,160,210);
+	margin-top: .6em;
+}
+
+footer div ul:first-of-type li a:hover {
+	color: rgb(240,157,52);
+}
+
+
+footer ul li {
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 0.579em;
+	margin-bottom: .3em;
+}
+
+footer ul li a {
+	color: white;
+}
+
+
+footer ul li a:hover {
+	text-decoration: underline;
+	color: rgb(36,160,210);
+}
+
+footer ul li span {
+	font-family: LatoBold, "Tahoma", "Arial", sans-serif;
+	font-size: 1.2em;
+	color: white;
+	margin-bottom: .3em;
+}
+
+footer>div ul li {
+	display: block;
+	position: relative;
+}
+
+#privacyPolicy p, #privacyPolicy ul li {
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: 1.2em;
+	color: rgb(88,88,88);
+	margin-bottom: .3em;
+}
+
+#privacyPolicy {
+	width: 50em;
+	bottom: 1.5em;
+	height: auto;
+	left: -28em;
+	padding: 1em;
+	border-radius: .5em;
+}
+
+#privacyPolicy p span {
+	font-family: Athena;
+	font-size: 2.074em;
+	color: rgb(36,160,210);
+}
+
+
+.dialog {
+	width: 50em;
+	height: auto;
+	position: absolute;
+	bottom: 5em;
+	z-index: 1000;
+	background: white;
+	padding: 1em;
+	font-family: LatoReg, "Tahoma", "Arial", sans-serif;
+	font-size: .833em;
+	border: 0.12em solid rgb(36,160,210);
+	border-radius: 1em;
+}
+
+
+
+
+
+
+
+
+.cf:after {
+	content: "";
+	display: table;
+	clear: both;
+}
